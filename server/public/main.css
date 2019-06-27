@@ -2,6 +2,39 @@ html {
   height: auto;
 }
 
+header{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 80px;
+ background-color:  green;
+}
+
+.logo {
+  display: flex;
+  height: 100%;
+  width: 80px;
+  border: 1px solid white; 
+  border-radius: 4px;
+  color: white;
+  font-family: sans-serif;
+  flex-direction: column;
+  align-items: center;
+}
+
 body {
-  height: ;
+  display: flex;
+  flex-direction: column;
+  height:  100vh ;
+  background-color: rgb(193, 214, 100);
+  align-items: center;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  width: 70vw;
+  height: 100%;
+  background-color: white;
+
 }
