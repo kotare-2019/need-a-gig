@@ -1,18 +1,12 @@
 import React from 'react'
-
-const App = () => {
-  return (
-    <h1>Do YOU need a gig?</h1>
-  )
-}
-
-export default App
+import Events from './Events'
 
 class App extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
+      events
   
     }
   }
@@ -27,10 +21,20 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <h1>needagig!</h1>
+    <div> 
+     <h1>Do YOU need a gig?</h1>
+      <form>
+          <label>Name: <input type="text" name="Name" /></label>
+          <label>City: <input type="text" name="City" /></label>
+          <button>Go!</button>
+      </form>
+    </div>
         <Events events={this.state.events} />
       </>
-    )
-  }
+    )}
 }
+
+
+
+
 export default App
