@@ -7,44 +7,28 @@ const App = () => {
 }
 
 export default App
-//////
-
-import React from 'react'
-import Dragons from './Dragon2'
-import unsplashImage from './UnsplashComponent'
-import { getCapsules } from '../../api/spaceX'
-import { unsplashRandom } from '../../api/unsplashImages'
-
 
 class App extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      isVisible: false,
-      capsules: [],
-      image: []
+  
     }
   }
 
   componentDidMount() {
-    getCapsules()
-      .then(capsules => {
-        this.setState({ capsules: capsules })
+    EventData()
+      .then(events => {
+        this.setState({ events: events })
       })
 
-    unsplashRandom()
-      .then(image => {
-        this.setState({ image: image })
-      })
-  }
 
   render() {
     return (
       <>
-        <h1>SpaceX!</h1>
-        {this.isVisible && <h2>What</h2>}
-        <Dragons allCapsules={this.state.capsules} />
+        <h1>needagig!</h1>
+        <Events events={this.state.events} />
       </>
     )
   }

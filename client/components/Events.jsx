@@ -1,10 +1,7 @@
 import React from 'react';
-import { getCapsules } from '../../api/spaceX'
+import { artistEvents } from '../../api/bandsintown'
 
-
-
-
-class Dragons extends React.Component {
+class Events extends React.Component {
   constructor(props) {
     super(props)
 
@@ -15,9 +12,9 @@ class Dragons extends React.Component {
 
     return (
       <>
-        <h2>Capsules!</h2>
+        <h2>Events!</h2>
         <ul>
-          {this.props.allCapsules.map(capsule => {
+          {this.props.artistEvents.map( => {
             console.log(capsule)
             return <>
               <li key={capsule.capsule_serial}>
