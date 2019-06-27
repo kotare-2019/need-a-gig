@@ -8,5 +8,9 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTable('widgets')
+  return knex.schema.dropTable('users')
 };
+
+
+//form
+//form puts data into state
