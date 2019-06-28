@@ -6,15 +6,21 @@ header {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 80px;
-  background-color: green;
+  width: 100vw;
+
 }
+
+.headerName {
+  font-size: 3em;
+  font-family: sans-serif;
+
+}
+
 
 .logo {
   display: flex;
-  height: 100%;
-  width: 80px;
-  border: 1px solid white;
+  height: 40%;
+  border: 1px;
   border-radius: 4px;
   color: white;
   font-family: sans-serif;
@@ -25,6 +31,7 @@ header {
 .exportDiv {
   display: flex;
   flex-direction: column;
+  background-color: rgba(150, 6, 236, 0.41);
   border: 1px solid white;
   height: 100%;
   align-self: center;
@@ -50,16 +57,18 @@ header {
   flex-direction: column;
   align-items: center;
   margin: auto;
+  font-family: sans-serif;
 }
 
 .inputName {
-  width: 60%;
+  width: 70%;
 }
 
 .title {
   display: flex;
   width: 100%;
   justify-content: center;
+  margin:  ;
 }
 
 .titleName {
@@ -71,10 +80,27 @@ header {
 .mainForm {
   display: flex;
   flex-direction: column;
-  height: auto;
+  height: 150px;
   align-items: center;
   justify-content: space-between;
+  margin: 0 10px 0 10px;
 }
+
+.goButton{
+  background-color: rgba(21, 33, 70, 0.39);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 8px;
+}  
+
+
+
+
 
 body {
   display: flex;

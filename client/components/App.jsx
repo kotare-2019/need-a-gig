@@ -13,9 +13,12 @@ const App = () => {
         </label>
 
         <label className="Name">
-          City: <input type="text" name="City" />
+          <h2 className="nameTitle">City</h2>
+          <input className="inputName" type="text" name="City" />
         </label>
-        <button>Go!</button>
+        <button className="goButton">
+          <a href="#" className="button" />Go!
+        </button>
       </form>
     </div>
   );
