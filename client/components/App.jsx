@@ -1,5 +1,6 @@
 import React from 'react'
 import { getUsers, createUser } from '../../client/internal-api';
+import Events from './Events'
 
 class App extends React.Component {
 
@@ -26,7 +27,7 @@ class App extends React.Component {
   }
 
   handleSubmit = event => {
-    
+
     event.preventDefault()
 
     console.log("form submitted")
@@ -36,7 +37,7 @@ class App extends React.Component {
       city: this.state.city
     }
 
-    
+
     console.log(user)
 
     this.setState({
@@ -50,17 +51,18 @@ class App extends React.Component {
   }
 
   render() {
-  return (
-   <div> 
-     <h1>Do YOU need a gig?</h1>
-     <form onSubmit={this.handleSubmit}>
+    return (
+      <div>
+        <h1>Do YOU need a gig?</h1>
+        <form onSubmit={this.handleSubmit}>
           <label>Name: <input type="text" name="Name" value={this.state.name} onChange={this.handleChange} /></label>
           <label>City: <input type="text" name="City" value={this.state.city} onChange={this.handleChange} /></label>
           <button>Go!</button>
-      </form>
-   </div>
-  )
- }
+        </form>
+        <Events />
+      </div>
+    )
+  }
 }
 
 export default App
