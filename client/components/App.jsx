@@ -14,35 +14,21 @@ class App extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  componentDidMount() {
-    console.log('api called')
-  }
 
   handleChange = event => {
-
+    // console.log(event.target.value)
     this.setState({
       [event.target.name]: event.target.value
     })
   }
 
   handleSubmit = event => {
-
-    event.preventDefault()
-
-    console.log("form submitted")
-
     const user = {
       name: this.state.name,
       city: this.state.city
     }
-
-
-    // console.log(12, user)
-
-
-    createUser(user).then(newUser => {
-      console.log(user)
-    })
+    createUser(user)
+    event.preventDefault()
   }
 
   render() {
