@@ -17,7 +17,7 @@ const App = () => {
           <input className="inputName" type="text" name="City" />
         </label>
         <button className="goButton">
-          <a href="#" className="button" />Go!
+          <a href="#" className="button" />GO!
         </button>
       </form>
     </div>
