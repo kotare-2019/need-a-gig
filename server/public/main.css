@@ -2,24 +2,58 @@ html {
   height: auto;
 }
 
-header{
+header {
   display: flex;
   justify-content: center;
   flex-direction: column;
   height: 80px;
- background-color:  green;
+  background-color: green;
 }
 
 .logo {
   display: flex;
   height: 100%;
   width: 80px;
-  border: 1px solid white; 
+  border: 1px solid white;
   border-radius: 4px;
   color: white;
   font-family: sans-serif;
   flex-direction: column;
   align-items: center;
+}
+
+.exportDiv {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  height: 100%;
+  align-self: center;
+}
+
+.appContainer {
+  display: flex;
+  align-items: center;
+}
+
+.Name {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  color: white;
+  background-color: purple;
+}
+.nameTitle {
+  width: 30%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.inputName {
+  width: 60%;
 }
 
 .title {
@@ -29,33 +63,32 @@ header{
 }
 
 .titleName {
- 
+  color: aqua;
+  font-size: 3em;
+  font-family: sans-serif;
 }
 
 .mainForm {
   display: flex;
   flex-direction: column;
-  height: 300px;
-  border: 1px solid black;
+  height: auto;
   align-items: center;
-  justify-content: center;
-
+  justify-content: space-between;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  height:  100vh ;
+  height: 100vh;
   align-items: center;
-  background-image: url('./images/background.png ');
+  background-image: url("./images/background.png ");
   background-size: cover;
 }
 
-main{
+main {
   display: flex;
   justify-content: center;
   width: 70vw;
   height: 100%;
   background-color: rgba(21, 33, 70, 0.39);
-
 }
