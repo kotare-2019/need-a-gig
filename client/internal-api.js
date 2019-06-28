@@ -3,9 +3,8 @@ import request from 'superagent'
 export function createUser(user) {
   return request.post('/api/v1/users')
     .send(user)
-    .then(response => {
-      console.log('New user: ', response.body)
-      return response.body
+    .end((err, res) => {
+      console.log(err)
     })
 }
 
