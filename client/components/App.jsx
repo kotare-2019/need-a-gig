@@ -1,32 +1,32 @@
 import React from 'react'
-import { getUsers, createUser } from '../../client/internal-api';
+import { createUser } from '../../client/internal-api';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props)
 
-  state = {
-    users: []
+    this.state = {
+      name: '',
+      city: ''
+    }
+
+    this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   componentDidMount() {
-    this.refreshUsers()
-  }
-
-  refreshUsers = () => {
-    getUsers().then(users => {
-      this.setState({
-        users
-      })
-    })
+    console.log('api called')
   }
 
   handleChange = event => {
+
     this.setState({
       [event.target.name]: event.target.value
     })
   }
 
   handleSubmit = event => {
-    
+
     event.preventDefault()
 
     console.log("form submitted")
@@ -36,31 +36,27 @@ class App extends React.Component {
       city: this.state.city
     }
 
-    
-    console.log(user)
 
-    this.setState({
-      name: '',
-      city: ''
-    })
+    // console.log(12, user)
+
 
     createUser(user).then(newUser => {
-      this.refreshUsers()
+      console.log(user)
     })
   }
 
   render() {
-  return (
-   <div> 
-     <h1>Do YOU need a gig?</h1>
-     <form onSubmit={this.handleSubmit}>
-          <label>Name: <input type="text" name="Name" value={this.state.name} onChange={this.handleChange} /></label>
-          <label>City: <input type="text" name="City" value={this.state.city} onChange={this.handleChange} /></label>
+    return (
+      <div>
+        <h1>Do YOU need a gig?</h1>
+        <form onSubmit={this.handleSubmit}>
+          <label>Name: <input type="text" name="name" value={this.state.name} onChange={this.handleChange} /></label>
+          <label>City: <input type="text" name="city" value={this.state.city} onChange={this.handleChange} /></label>
           <button>Go!</button>
-      </form>
-   </div>
-  )
- }
+        </form>
+      </div>
+    )
+  }
 }
 
 export default App
